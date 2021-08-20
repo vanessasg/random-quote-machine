@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500');
+* {
+    margin:0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+html{
+    background-color: blueviolet;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    line-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    min-width: 300px;
+}
+#wrapper {
+    font-weight: 400;
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 24px blueviolet;
+    max-width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#quote-box{
+    padding:40px 45px;
+}
+#quote-text{
+    color: blueviolet;
+    font-size: 29px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 35px;
+    letter-spacing: 0.1px;
+}
+#author{
+    /*color: blueviolet;*/
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: light;
+}
+
+.social{
+    border-radius: 3px;
+    background-color: blueviolet;
+    color: white;
+    display: inline-block;
+    width: 35px;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+}
+#new-quote{
+    float: right;
+    height: 35px;
+    line-height: 35px;
+    width: 100px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+}
+#new-quote:hover, .social:hover{
+    opacity: 0.9;
+    color: white;
+}
+#footer{
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+}
+#footer a{
+    color: white;
+}
