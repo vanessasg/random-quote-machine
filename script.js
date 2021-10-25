@@ -1,20 +1,17 @@
 $(document).ready(function () {
-    //alert('ciao');
 
-    //? chiamata ajax per Forismatic API
+    //? Forismatic API request
     function randomQuote() {
         $.ajax({
-            url: "https://api.forismatic.com/api/1.0/?",    //? indirizzo API
-            dataType: "jsonp",                              //? tipi di dati che sto prendendo
+            url: "https://api.forismatic.com/api/1.0/?",    
+            dataType: "jsonp",                             
             data: "method=getQuote&format=jsonp&lang=en&jsonp=?",   //? metodo, formato, lingua
-            success: function (quoteData) {                 //? archivio i risultati in quoteData che conterrà quoteText e quoteData
+            success: function (quoteData) {                 //? store data
 
-                //? se capita una cit senza autore
                 if (quoteData.quoteAuthor === '') {
                     quoteData.quoteAuthor = 'Unknown'
                 };
 
-                //? accedo all'ele sul dom e inserisco il testo
                 $('#text').html('<span id="text">' + quoteData.quoteText + '</span>');
                 $('#author').html('<div id="author">- ' + quoteData.quoteAuthor + '</div>')
             }
